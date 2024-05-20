@@ -4,13 +4,9 @@
             color: #333;
             margin: 0;
             padding: 0;
+
         }
-        header {
-            background-color: #4682b4; /* Darker blue for header */
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
+       
         nav {
             display: flex;
             justify-content: center;
@@ -47,3 +43,100 @@
             width: 100%;
             bottom: 0;
         }
+
+        #about {
+  display: flex;
+  padding: 100px 250px;
+}
+
+#mini-nav {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+
+#mini-nav a {
+  position: relative;
+  color: black;
+  margin-right: 50px;
+  text-decoration: none;
+  font-weight: bold;
+}
+#mini-nav a:hover{
+  cursor: pointer;
+  color: rgb(255, 165, 0);
+}
+
+#mini-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 20px;
+  height: 2px;
+  background-color: gray;
+  transform: translateX(-50%);
+  transition: width 0.3s ease-in-out;
+}
+
+#mini-nav a.active-subtitle {
+  color: rgb(255, 69, 0);
+}
+#mini-nav a.active-subtitle::after {
+  width: 100%;
+  background-color: rgb(255, 165, 0);
+  cursor: pointer;
+}
+
+
+.about-me-image {
+  margin-right: 100px;
+}
+
+.about-me-details {
+  min-width: 240px;
+}
+
+.extra-details {
+  background-color: #87cefa;
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+.project-card p {
+  margin: 10px 0;
+}
+
+.project-card a {
+  color: #4682b4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
