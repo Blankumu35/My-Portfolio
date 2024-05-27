@@ -1,7 +1,31 @@
 import './App.css'
 import pic from './Beni.jpeg';
+import { FaHtml5 } from "react-icons/fa";
+import { IoLogoCss3 } from "react-icons/io";
+import { RiJavascriptFill } from "react-icons/ri";
+import { Icon } from '@iconify/react';
+
+
 
 function App() {
+
+   
+
+    const logoBox = () => {
+    let logos = [<FaHtml5 style={{color:'indianred'}} />, <IoLogoCss3 style={{color:'blue'}}/>, <RiJavascriptFill style={{color:'gold'}}/>, <Icon icon="devicon:react" />,
+    <Icon icon="logos:python" /> , <Icon icon="devicon:java" />,
+    <Icon icon="logos:mysql" />, <Icon icon="devicon:mongodb-wordmark" style={{height:40, width:40}} />, <Icon icon="vscode-icons:file-type-cpp3" />,
+    <Icon icon="skill-icons:aws-light" />, <Icon icon="logos:google-cloud" />];
+
+    return logos.map((logo, index) => (
+      <div key={index} className="logo">
+        {logo}
+      </div>
+    ));
+  };
+
+      
+
     let handleDetails = (section) => {
 
     // Remove the active class from all links
@@ -33,7 +57,6 @@ function App() {
         <a href="#home">Home</a>
         <a href="#about">About Me</a>
         <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
       </nav>
       <section id="home" className="container">
         <div className="Main-Title">
@@ -62,16 +85,19 @@ function App() {
           </li>
           <div className="extra-details">
             <div id="tech" style={{ display: 'none' }}>
-              <p>Tech techetcelc</p>
+               <div className="logo-box">
+                {logoBox()}
+              </div>
             </div>
             <div id="awards" style={{ display: 'none' }}>
-              <p>Awards teykjwgefc</p>
+              <p className='bold-text'>SwEng 2024 Industry Showcase</p>
+              <p className='subtext'>2nd place</p>
             </div>
             <div id="education" style={{ display: 'none' }}>
-              <p>Computer Science<span> - Trinity College Dublin</span></p>
-              <p><span>2022 - Present</span></p>
-              <p>Leaving Certificate<span> - Ashfield College</span></p>
-              <p><span>2022</span></p>
+              <p className='bold-text'>Computer Science<span className='light-text'> - Trinity College Dublin</span></p>
+              <p className='subtext'><span className='light-text'>2022 - Present</span></p>
+              <p className='bold-text'>Leaving Certificate<span className='light-text'> - Ashfield College</span></p>
+              <p><span className='subtext'>2022</span></p>
             </div>
           </div>
         </div>
@@ -97,14 +123,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section id="contact" className="container">
-        <h2>Contact</h2>
-        <p>You can reach me at:</p>
-        <p>Email: <a href="mailto:lankumur@tcd.ie">lankumur@tcd.ie</a></p>
-        <p>
-          LinkedIn: <a href="https://www.linkedin.com/in/beni-lankumu-37805b200/" target="_blank" rel="noopener noreferrer">Link</a>
-        </p>
-      </section>
+
       <footer>
         <p>&copy; 2024 Beni Lankumu. All rights reserved.</p>
       </footer>
