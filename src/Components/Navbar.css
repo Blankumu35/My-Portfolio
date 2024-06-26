@@ -1,0 +1,81 @@
+.navbar {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(11, 23, 87, 0.5), rgba(244, 60, 60, 0.1));
+  padding: 10px 20px;
+  color: white;
+}
+
+
+
+.menu-bars {
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  color: white;
+  justify-content: left;
+  align-items:start;
+  padding-right: 650px;
+  z-index: 1001;
+}
+
+/* Sidebar styles */
+.nav-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: linear-gradient(to left, rgba(21, 12, 58, 0.2), rgba(244, 60, 60, 0.1));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  z-index: 1000;
+}
+
+.nav-menu.active {
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding-top: 70px;
+}
+
+.nav-menu ul {
+  width: 100%;
+  list-style: none;
+  padding: 0px;
+  
+}
+
+.nav-menu ul li {
+  width: 100%;
+  padding: 30px 20px;
+  border-bottom: 1px solid #444;
+}
+
+.nav-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: block;
+}
+
+.nav-menu ul li a:hover {
+  color: #575757;
+}
+
+.name-text{
+  -webkit-text-stroke:rgb(255, 157, 0) 2px;
+  background:linear-gradient(red,rgb(141, 4, 4),red);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: 40px;
+  font-family: "Goblin One";
+  filter: drop-shadow(0 0px 20px rgb(255, 157, 0));
+}
