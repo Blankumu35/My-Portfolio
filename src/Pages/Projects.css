@@ -1,0 +1,328 @@
+#projects{
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.background-projects {
+  position: absolute;
+  top: 1;
+  left: 0;
+  object-fit: cover;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1; 
+}
+
+
+
+h2.projects-title {
+  color: white; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better contrast */
+  display: flex;
+  justify-content: center;
+  font-size: 70px;
+  margin-bottom: 10px;
+}
+
+.Name-Text-Projects {
+  -webkit-text-stroke: 1px rgb(0, 255, 255);
+  background: rgb(0, 255, 255);
+  background-size: 200% 100%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation:  animate-stroke1 10s ease-in-out infinite;
+}
+
+@keyframes animate-stroke1 {
+  25% {
+    -webkit-text-stroke-color: rgb(0, 255, 255);
+  }
+  50% {
+    -webkit-text-stroke-color: rgb(38, 0, 255);
+  }
+  75% {
+    -webkit-text-stroke-color: rgb(38, 0, 255);
+  }
+  0%, 100% {
+    -webkit-text-stroke-color: rgb(0, 255, 255);
+  }
+}
+
+
+.slide img{
+  width: 100%;
+  margin: 0 auto;
+}
+.project-cards {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  width: 70%;
+  height: 63vh;
+  margin: 0 auto;
+}
+
+.slide{
+  transform: scale(0.2);
+  transition: transform 300ms;
+  opacity: 0.5;
+  margin: auto;
+}
+.activeSlide{
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.project-card {
+  width: 100%;
+  max-width: 250px; /* Adjust as needed */
+  height: 350px; /* Adjust as needed */
+  position: relative;
+  overflow: hidden;
+    margin-left: 5%;
+  padding: 0;  /* Removes padding inside each project card */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  pointer-events: auto; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease
+}
+
+.project-card-text {
+  padding: 20px;
+  text-align: center;
+}
+
+.project-btn-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.project-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.arrow{
+  position: absolute;
+  cursor: pointer;
+  z-index:10;
+}
+
+.arrow svg{
+  transition: color 300ms;
+  font-size: 1.5rem;
+}
+.arrow svg:hover{
+  color: #68edff;
+}
+.next{
+  right:0%;
+  top:50%
+}
+.prev{
+  left:0%;
+  top:50%;
+}
+
+
+
+
+.project-card-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show project text on hover */
+.project-card:hover .project-card-text {
+  opacity: 1;
+}
+
+/* Dim other cards when one is hovered */
+.project-cards:hover > .project-card{
+  &:hover{
+  opacity: 1;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  height: 400px;
+  transition: opacity 0.2s transform 0.2s width 0.2s height 0.2s;
+  }
+  &:not(:hover){
+    opacity: 0.4;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .project-cards{
+    width: 80%;
+    margin: 0 auto;
+
+  }
+  .project-card{
+    margin-left: 15%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .project-cards{
+    width: 90%;
+    margin: 0 auto;
+
+  }
+  .project-card{
+    margin-left: 7%;
+    
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .project-cards{
+    width: 90%;
+    margin: 0 auto;
+
+  }
+  .project-card{
+    margin-left: 5%;
+     max-width: 250px;
+    height: 350px;
+    
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .project-cards{
+    width: 90%;
+    margin: 0 auto;
+
+  }
+  .project-card{
+    margin-left: 4%;
+     max-width: 200px;
+    height: 300px;
+  }
+  .project-card h3 {
+  margin: 0;
+  font-size: 1em;
+  color: #ff6f61;
+}
+
+.project-card p {
+  margin: 10px 0 0;
+  font-size: 0.5em;
+  margin-bottom: 10px;
+}
+}
+@media screen and (max-width: 540px) {
+  .project-cards{
+    width: 90%;
+    margin: 0 auto;
+
+  }
+  .project-card{
+    margin-left: 10%;
+     max-width: 250px;
+    height: 300px;
+  }
+  .project-card h3 {
+  margin: 0;
+  font-size: 1em;
+  color: #ff6f61;
+}
+
+.project-card p {
+  margin: 10px 0 0;
+  font-size: 0.5em;
+  margin-bottom: 10px;
+}
+}
+@media screen and (max-width: 500px) {
+  .project-cards{
+    width: 100%;
+    margin: 0 auto;
+
+  }
+  .project-card{
+    margin-left: 7%;
+    max-width: 200px;
+    height: 300px;
+    width: 100%;
+  }
+  .project-card h3 {
+  margin: 0;
+  font-size: 1em;
+  color: #ff6f61;
+}
+
+.project-card p {
+  margin: 10px 0 0;
+  font-size: 0.5em;
+  margin-bottom: 10px;
+}
+}
+
+
+
+
+
+
+.project-card h3 {
+  margin: 0;
+  font-size: 1em;
+  color: #ff6f61;
+}
+
+.project-card p {
+  margin: 10px 0 0;
+  font-size: 0.85em;
+  margin-bottom: 10px;
+}
+
+.project-card a {
+  margin-top: 10px;
+  color: #ff6f61;
+}
+.project-btn-container{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
+.project-btn{
+  padding: 5px 5px;
+  border-radius: 6px;
+  font-size: 0.6rem;
+  stroke-width: 1px;
+}
+
+
+
+.project-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1); /* Dark overlay for better text readability */
+  z-index: 0;
+  transition: all 0.3s;
+}
