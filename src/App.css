@@ -2,13 +2,17 @@
         
         body {
             font-family: Arial, sans-serif;
-            background-color: #00002b; 
+            background-color: rgba(0, 0, 43, 0.5); 
             color: #c8c2c2;
             margin: 0;
             padding: 0;
             overflow-x: hidden;
             text-wrap: wrap;
+             object-fit:fill;
+  background-repeat:repeat-x;
+  background-image: url('src/assets/background1.jpg');
         }
+       
         .main-content{
           padding-top: 12px;
         }
@@ -35,10 +39,14 @@
     }
 
 
+
     .Main-Title{
         padding: 150px 130px;
         z-index: 1000;
     }
+    .Start-title{
+      display: block;
+      }
 @keyframes animate-gradient {
   0% {
     background-position: 0% 50%;
@@ -268,11 +276,14 @@
     display: flex;
     padding: 50px 250px;
     object-fit: cover;
-    height: 115vh;
+    height: 100vh;
     width: 100vw;
     overflow: hidden;
     text-wrap: wrap;
     justify-content: space-around;
+     object-fit:fill;
+  background-repeat:repeat-x;
+  background-image: url('src/assets/background1.jpg');
         }
          .transition-container #home{
           position: absolute;

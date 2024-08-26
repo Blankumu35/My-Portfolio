@@ -1,5 +1,5 @@
-import {useEffect, useState } from 'react';
-import axios from 'axios';
+import {FC, useEffect, useState } from 'react';
+import axios, { AxiosError, AxiosResponse } from 'axios';
 import gsap from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import './App.css';
@@ -13,7 +13,6 @@ import pic from './assets/Beni.jpeg';
 import aboutBg from './assets/background1.jpg'
 import projectsbg from './assets/bg6.jpg'
 import backgroundSPACE from './assets/background.mp4'
-import Divider from '@mui/material/Divider';
 import Slider from 'react-slick'; 
 import 'slick-carousel/slick/slick.css'; 
 import 'slick-carousel/slick/slick-theme.css';
@@ -57,19 +56,19 @@ const [selectedLogo, setSelectedLogo] = useState<TechSkill | null>(null);
   },
   {
     id: 2,
-    title: 'Connect 4',
-    description: 'Play against AI or a friend',
-    github: 'https://github.com/Blankumu35/Connect-4',
-    tryNow: 'https://github.com/Blankumu35/Connect-4',
-    backgroundUrl: '/src/assets/connect4.jpg', // Add the URL for the background image
-  },
-  {
-    id: 3,
     title: 'Movie Recommender',
     description: 'Find the perfect Film / TV Show based on your personal preferences.',
     github: 'https://github.com/Blankumu35/Movie-Recommender-App',
     tryNow: 'https://github.com/Blankumu35/Movie-Recommender-App',
     backgroundUrl: '/src/assets/Mocies.jpg', // Add the URL for the background image
+  },
+  {
+    id: 3,
+    title: 'Connect 4',
+    description: 'Play against AI or a friend',
+    github: 'https://github.com/Blankumu35/Connect-4',
+    tryNow: 'https://github.com/Blankumu35/Connect-4',
+    backgroundUrl: '/src/assets/connect4.jpg', // Add the URL for the background image
   },
 ];
 
@@ -135,21 +134,28 @@ const logos: TechSkill[] = [
   }
 };
 
-const NextArrow = () => {
+interface ArrowProps {
+  onClick?: () => void;
+  className?: string;
+  style?: React.CSSProperties;
+}
+
+const NextArrow: FC<ArrowProps> = ({ onClick}) => {
   return (
-    <div className="arrow next">
+    <div className="arrow next" onClick={onClick}>
       <FaArrowRight />
     </div>
   );
 }
 
-const PrevArrow = () => {
+const PrevArrow: FC<ArrowProps> = ({ onClick }) => {
   return (
-    <div className="arrow prev">
+    <div className="arrow prev" onClick={onClick}>
       <FaArrowLeft />
     </div>
   );
 }
+
   const [imageIndex, setImageIndex] = useState(1)
   useEffect(() => {
     console.log(imageIndex)
@@ -238,10 +244,10 @@ const PrevArrow = () => {
 
   const handleSubmit = () => {
     axios.post("http://localhost:3000/send-email",formData)
-              .then(response => {response.data
+              .then((response:AxiosResponse) => {response.data
                alert('Message sent successfully')})
 
-              .catch(error => { console.error('Error:', error);
+              .catch((error:AxiosError) => { console.error('Error:', error);
                alert('An error occurred. Please try again later.')});
 
               
@@ -377,14 +383,7 @@ useEffect(() => {
               <div className="logo-box">
                 {logoBox()}
               </div>
-            <div id="tech" style={{ display: 'none' }}>
-               <div className="logo-box">
-                {logoBox()}
-              </div>
-            </div>
-            <div id="awards" style={{ display: 'none' }}>
-              <p className='bold-text'>SwEng 2024 Industry Showcase</p>
-              <p className='subtext'>2nd place</p>
+
             </div>
             <div id="education" style={{ display: 'none' }}>
               <div className="timeline-display">
@@ -409,18 +408,10 @@ useEffect(() => {
                   <div className="gif-container">
                     <div className="gif-background"></div>
                   </div>
-                </div>
-                <div className="gif-container">
-                  <div className="gif-background"></div>
-                </div>              
+                </div>           
               </div>
-              <p className='bold-text'>Computer Science<span className='light-text'> - Trinity College Dublin</span></p>
-              <p className='subtext'><span className='light-text'>2022 - Present</span></p>
-              <p className='bold-text'>Leaving Certificate<span className='light-text'> - Ashfield College</span></p>
-              <p><span className='subtext'>2022</span></p>
             </div>
           </div>
-        </div>
         </div>
       </section>
       <section id="home" className="container">
@@ -433,7 +424,6 @@ useEffect(() => {
           </h1>
           <div className='animated-color' />
           <h2 className='follow-me'>Follow me</h2>
-          <Divider orientation="horizontal" variant="middle" flexItem />
 
           <div className='Socials'> 
           <a href='https://www.linkedin.com/in/beni-lankumu-37805b200/' target='_blank'><ImLinkedin /></a>
@@ -475,7 +465,7 @@ useEffect(() => {
         </Slider>
       </div>
     </section>
-    <img src={aboutBg} className='background-main' />
+    <img src={aboutBg} className='background-contact' />
      <section id="contact" className="container">
       <h2 style={{color:'whitesmoke'}}>Contact Me</h2>
 

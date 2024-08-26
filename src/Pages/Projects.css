@@ -3,6 +3,8 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
+  height: 97vh;
+  background:none;
 }
 
 .background-projects {
