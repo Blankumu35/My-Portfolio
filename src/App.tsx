@@ -167,7 +167,7 @@ const PrevArrow = () => {
   arrows:true,
   nextArrow: <NextArrow />,
   prevArrow: <PrevArrow />,
-  beforeChange:(current: number, next: number) => setImageIndex(next+1),
+  beforeChange:(current: number, next: number) => { setImageIndex(next+1); console.log(current)},
   responsive: [
     {
       breakpoint: 1024,
@@ -178,7 +178,7 @@ const PrevArrow = () => {
         dots: false,
           centerMode: true,
   centerPadding: '0px',
-        beforeChange:(current: number, next: number) => setImageIndex(next+1),
+        beforeChange:(current: number, next: number) => { setImageIndex(next+1); console.log(current)},
       },
     },
     {
@@ -190,7 +190,7 @@ const PrevArrow = () => {
         dots: false,
         centerMode: true,
   centerPadding: '0px',
-          beforeChange:(current:number, next:number) => setImageIndex(next+1),
+          beforeChange:(current:number, next:number) => { setImageIndex(next+1); console.log(current)},
 
       },
     },
@@ -300,6 +300,9 @@ const PrevArrow = () => {
     }
 }, [screenWidth, scrollY, screenHeight]);
 
+useEffect(() => {
+  console.log(selectedLogo)
+})
 
 
   useEffect(() => {
@@ -328,13 +331,13 @@ const PrevArrow = () => {
         end: '+=10%',
         scrub: 2,
         pin: true,
-        markers: true,
+        markers: false,
         onLeaveBack: () => {
             if(home){
           home.style.display = 'block';
           }
           tl.to('.about-me-details', { opacity: 0 });
-          tl.to('.about-me-image img', { borderRadius: 50, duration: 0.9, scrub: 1, ease: 'power1.inOut', stagger: 0.5, markers: true });
+          tl.to('.about-me-image img', { borderRadius: 50, duration: 0.9, scrub: 1, ease: 'power1.inOut', stagger: 0.5, markers: false });
           tl.to('.about-me-image', { scale: 0.81, xPercent: 82, yPercent: 7 });
         },
       },
@@ -342,8 +345,8 @@ const PrevArrow = () => {
           if(home){
           home.style.display = 'none';
           }
-          tl.to('.about-me-image img', {  borderRadius: 50, duration: 0.9, scrub: 1, ease: 'power1.inOut', stagger: 0, markers: true });
-          tl.fromTo('.about-me-image',{ scale: 0.81, xPercent: 82, yPercent: 8}, { scale: 1, xPercent: 0, yPercent: 8, ease: 'power1.inOut', markers: true, duration: 0.9, scrub: 1, stagger: 0 });
+          tl.to('.about-me-image img', {  borderRadius: 50, duration: 0.9, scrub: 1, ease: 'power1.inOut', stagger: 0, markers: false });
+          tl.fromTo('.about-me-image',{ scale: 0.81, xPercent: 82, yPercent: 8}, { scale: 1, xPercent: 0, yPercent: 8, ease: 'power1.inOut', markers: false, duration: 0.9, scrub: 1, stagger: 0 });
           tl.fromTo('.about-me-details', { opacity: 0 }, { opacity: 1, duration: 0.9, scrub: 1, stagger: 0 });
         
       },
