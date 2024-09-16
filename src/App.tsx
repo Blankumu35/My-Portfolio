@@ -527,7 +527,7 @@ useEffect(() => {
     </section>
    
   </div>
-      <footer style={{marginTop:-35}}>
+      <footer style={{marginTop:-35, zIndex:2000}}>
         <p>&copy; 2024 Beni Lankumu. All rights reserved.</p>
       </footer>
     </>
