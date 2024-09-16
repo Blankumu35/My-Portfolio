@@ -10,7 +10,7 @@
             text-wrap: wrap;
              object-fit:fill;
   background-repeat:repeat-x;
-  background-image: url('src/assets/background1.jpg');
+  background-image: url('./assets/background1.jpg');
         }
        
         .main-content{
@@ -126,26 +126,39 @@
   }
 }*/
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1450px) {
   .about-me-image img{
   border-radius: 50%;
   width: 300px !important;
   height: 300px !important;
 
 }
-        .transition-container #about{
-    display: flex !important;
-    padding: 50px 100px !important;
-    object-fit: cover !important;
-    height: 115vh !important;
-    width: 100vw !important;
-    overflow: hidden !important;
-    text-wrap: wrap !important;
-    justify-content: space-around !important;
-        }
+.Main-Title{
+        padding: 150px 90px;
+    }
+.Start-Title {
+  font-size: 55px;
+}
+.Name-Text-Main{
+  font-size: 55px;
+
+}
+.Aspire-title{
+  font-size: 15px !important;
 }
 
-@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 1250px) {
+  .nameUpTop{
+    display:flex !important
+
+  }
+
+
+  .Main-Title{
+    display:none !important
+  }
   .about-me-image img{
   border-radius: 50%;
   width: 300px !important;
@@ -165,13 +178,6 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .follow-me{
-    display: none ;
-  }
-  .Socials{
-    display: none;
-  }
-
     .transition-container #about {
     display: flex !important;
     padding: 1.3rem !important;
@@ -186,12 +192,7 @@
 }
 
 @media screen and (max-width: 900px) {
-  .follow-me{
-    display: none !important;
-  }
-  .Socials{
-    display: none !important;
-  }
+ 
     .about-me-image img{
   border-radius: 50% !important;
   width: 250px !important;
@@ -202,12 +203,7 @@
 }
 
  @media screen and (max-width: 800px) {
-  .follow-me{
-    display: none;
-  }
-  .Socials{
-    display: none;
-  }
+
     .about-me-image img{
   border-radius: 50% !important;
   width: 250px !important;
@@ -217,39 +213,7 @@
 
 }
 
-@media screen and (max-width: 600px) {
-   .follow-me{
-    display: none;
-  }
-  .Socials{
-    display: none;
-  }
 
-}
-@media screen and (max-width: 540px) {
-  .Main-Title h1{
-    color: rgba(255, 111, 97,0); /*hide text
-  } */}
-
-  span.Name-Text-Main{
-    display: block;
-    margin-top: -205px;
-    position: absolute;
-    left: 15%;
-  }
-  .break{
-    display: none;
-  }
-  .Aspire-title{
-    display: none;
-  }
-  .follow-me{
-    display: none;
-  }
-  .Socials{
-    display: none;
-  }
-}
 
 
 

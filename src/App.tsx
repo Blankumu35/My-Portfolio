@@ -12,7 +12,11 @@ import Navbar from './Components/Navbar';
 import pic from './assets/Beni.jpeg';
 import aboutBg from './assets/background1.jpg'
 import projectsbg from './assets/bg6.jpg'
-import backgroundSPACE from '/src/assets/background.mp4'
+import backgroundSPACE from './assets/background.mp4'
+import footballImage from './assets/football.jpeg'
+import movieImage from './assets/Mocies.jpg'
+import connect4Image from './assets/connect4.jpg'
+
 import Slider from 'react-slick'; 
 import 'slick-carousel/slick/slick.css'; 
 import 'slick-carousel/slick/slick-theme.css';
@@ -52,7 +56,7 @@ const [selectedLogo, setSelectedLogo] = useState<TechSkill | null>(null);
     description: "Check scores, fixtures and stats in an app that's dedicated to the Beautiful Game.",
     github: 'https://github.com/Blankumu35/Football-App',
     tryNow: 'https://github.com/Blankumu35/Football-App',
-    backgroundUrl: '/src/assets/football.jpeg', // Add the URL for the background image
+    backgroundUrl:footballImage, 
   },
   {
     id: 2,
@@ -60,7 +64,7 @@ const [selectedLogo, setSelectedLogo] = useState<TechSkill | null>(null);
     description: 'Find the perfect Film / TV Show based on your personal preferences.',
     github: 'https://github.com/Blankumu35/Movie-Recommender-App',
     tryNow: 'https://github.com/Blankumu35/Movie-Recommender-App',
-    backgroundUrl: '/src/assets/Mocies.jpg', // Add the URL for the background image
+    backgroundUrl: movieImage, 
   },
   {
     id: 3,
@@ -68,8 +72,8 @@ const [selectedLogo, setSelectedLogo] = useState<TechSkill | null>(null);
     description: 'Play against AI or a friend',
     github: 'https://github.com/Blankumu35/Connect-4',
     tryNow: 'https://github.com/Blankumu35/Connect-4',
-    backgroundUrl: '/src/assets/connect4.jpg', // Add the URL for the background image
-  },
+    backgroundUrl: connect4Image, 
+  }
 ];
 
 
@@ -416,6 +420,9 @@ useEffect(() => {
       </section>
       <section id="home" className="container">
         <img src={background} className="background" alt="background" />
+        <div style={{display:'none', justifyContent:'center'}} className='nameUpTop'>
+        <span style={{display:'flex', justifyContent:'center', fontSize: 70}} className="Name-Text-Main justify-center flex items-center lg:hidden">BENI</span>
+        </div>
         <div className="Main-Title">
           <h1 className='Start-Title' style={{ marginBottom:60}}>
             Hello,<br className='break' /> I'm <span className="Name-Text-Main">BENI</span>
