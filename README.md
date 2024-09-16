@@ -1,9 +1,9 @@
-Link to Portfolio: https://my-portfolio-19nmetxip-blankumu35s-projects.vercel.app/
+Link to Portfolio: https://my-portfolio-three-steel.vercel.app/
 
 Tech used: React, Typescript, GSAP(free version), Slick Carousel
 
 Issues that remain:
-- A few areas of the website are not as responsive as they should(Thats due to my lack of care)
+- A few areas of the website are not as responsive as they should(Thats due to lack of time to work on it)
 - Need to use docker to connect the back-end to the front-end
 - The background of the timeline is not showing on the vercel app.
 - 
