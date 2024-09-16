@@ -13,6 +13,7 @@
   object-fit: cover;
   transform: translate(-50%, -50%);
   filter: blur(0.7px);
+  background-color: rgba(0, 0, 0,0.9);
   
 }
 
