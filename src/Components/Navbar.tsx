@@ -33,14 +33,7 @@ const Navbar = () => {
             <a href="#contact">Contact</a>
           </li>
         </ul>
-        <div className='Nav-bottom'>
-
-          <div className='Nav-Socials'> 
-          <a href='https://www.linkedin.com/in/beni-lankumu-37805b200/' target='_blank'><ImLinkedin /></a>
-          <a href='https://github.com/Blankumu35'target='_blank'><ImGithub /></a>
-          <a href='https://www.instagram.com/beni_03_35/'target='_blank'><FaInstagram /></a>
-          </div>
-        </div>
+       
       </nav>
     </>
   );
