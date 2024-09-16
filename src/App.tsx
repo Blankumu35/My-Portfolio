@@ -12,7 +12,7 @@ import Navbar from './Components/Navbar';
 import pic from './assets/Beni.jpeg';
 import aboutBg from './assets/background1.jpg'
 import projectsbg from './assets/bg6.jpg'
-import backgroundSPACE from '../dist/assets/background-Ci4S26Mj.mp4'
+import backgroundSPACE from './dist/assets/background-Ci4S26Mj.mp4'
 import Slider from 'react-slick'; 
 import 'slick-carousel/slick/slick.css'; 
 import 'slick-carousel/slick/slick-theme.css';
