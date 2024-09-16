@@ -1,4 +1,4 @@
-Link to Portfolio: https://my-portfolio-d78ix0niv-blankumu35s-projects.vercel.app/
+Link to Portfolio: https://my-portfolio-19nmetxip-blankumu35s-projects.vercel.app/
 
 Tech used: React, Typescript, GSAP(free version), Slick Carousel
 
