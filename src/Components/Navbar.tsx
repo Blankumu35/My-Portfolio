@@ -2,9 +2,7 @@ import { FiMenu } from 'react-icons/fi';
 import './Navbar.css';
 import  { useState } from 'react';
 import { IoClose } from 'react-icons/io5';
-import {FaInstagram } from 'react-icons/fa';
 
-import { ImGithub, ImLinkedin} from 'react-icons/im';
 const Navbar = () => {
   const [sidebar, setSidebar] = useState(false);
 
